@@ -1,0 +1,27 @@
+name: TECHO5 dashcast
+version: "1.0.0"
+slug: techo5_dashcast
+description: Streams Home Assistant dashboards (custom cards included) to Echo Shows running TECHO5
+url: https://github.com/HuskerMinion/techo5/tree/main/dashcast
+arch:
+  - amd64
+  - aarch64
+startup: application
+boot: auto
+init: false
+ports:
+  9555/tcp: 9555
+ports_description:
+  9555/tcp: dashcast (TECHO5 screens connect here; never forward it from your router)
+options:
+  ha_url: "http://homeassistant.local:8123"
+  ha_token: ""
+  dashcast_key: ""
+  warm_for: "5m"
+  warm_count: 4
+schema:
+  ha_url: url
+  ha_token: password
+  dashcast_key: password
+  warm_for: str
+  warm_count: int(1,16)

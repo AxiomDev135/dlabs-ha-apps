@@ -1,0 +1,15 @@
+name: Kokoro Wyoming
+version: "1.0.0"
+slug: kokoro_wyoming
+description: Local Kokoro text-to-speech (natural voices, including British male voices) for Home Assistant Assist, over the Wyoming protocol
+url: https://github.com/relvacode/kokoro-wyoming
+arch:
+  - amd64
+startup: services
+boot: auto
+init: false
+discovery: []
+ports:
+  10210/tcp: null
+ports_description:
+  10210/tcp: Wyoming (Home Assistant connects inside the host; leave unmapped)
